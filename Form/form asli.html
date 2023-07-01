@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Tugas Membuat Form</title>
+	<!-- Bootstrap -->
+    <link href="bootstrap-4.6.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+        <!-- css untuk select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- jika menggunakan bootstrap4 gunakan css ini  -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@x.x.x/dist/select2-bootstrap4.min.css">
+        <!-- cdn bootstrap4 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container"> 
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="card p-4 shadow-lg border-0 my-4">
+					<img src="Logo.png" alt="Register" class="d-block mx-auto">
+					<h4 class="py-3 text-center">PENGAJUAN PROPOSAL</h4>
+					<form action="">
+
+						<div class="form-group form-row">
+							<div class="col-md-8">
+								<label for="nama_lengkap">Nama Lengkap</label>
+								<input type="text" placeholder="Masukkan Nama Lengkap anda" class="form-control rounded-lg" onkeyup="LettersOnly(this)"> 
+							</div>
+							<div class="col-md-4">
+								<label for="NIM">NIM</label>
+								<input type="text" placeholder="Masukkan NIM anda" class="form-control rounded-lg" onkeyup="NumbersOnly(this)" maxlength="8">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Judul">Judul</label>
+							<input type="text" placeholder="Masukkan Judul ujian skripsi anda" class="form-control rounded-lg">
+						</div>
+
+						<div class="form-group form-row">
+							<div class="col-md-6">
+								<label for="Ketua">Ketua</label>
+								<select class="form-control rounded-lg" value="Ketua" id="Ketua" name="Ketua">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="Sekretaris">Sekretaris</label>
+								<select class="form-control rounded-lg" value="Sekretaris" id="Sekretaris">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group form-row">
+							<div class="col-md-6">
+								<label for="AnggotaI">Anggota I</label>
+								<select class="form-control rounded-lg" id="AnggotaI" name="AnggotaI"  value="AnggotaI">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="AnggotaII">Anggota II</label>
+								<select class="form-control rounded-lg" value="AnggotaII" id="AnggotaII" name="AnggotaII">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>
+						</div>
+					
+						<div class="form-group form-row">
+							<div class="col-md-6">
+								<label for="AnggotaIII">Anggota III/Pengarah</label>
+								<select class="form-control rounded-lg" value="AnggotaIII" id="AnggotaIII" name="AnggotaIII">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+	  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+	  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+	  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+	  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+	  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+	  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+	  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+	  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+	  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+	  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+	  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+	  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<label for="AnggotaIV">Anggota IV/Pengarah</label>
+								<select class="form-control rounded-lg" value="AnggotaIV" id="AnggotaIV" name="AnggotaIV">
+									<option value=""></option>
+									<option value="Drs.Kasim,M.T.">Drs.Kasim,M.T.</option>
+									<option value="Iin Karmila Yusri,S.ST., M.Eng., Ph.D.">Iin Karmila Yusri,S.ST., M.Eng., Ph.D.</option>
+	  								<option value="Ir.Dahlia,M.T.">Ir.Dahlia,M.T.</option>
+	  								<option value="Irmawati,S.T.,M.T">Irmawati,S.T.,M.T.</option>
+	  								<option value="Muh. Fajri Raharjo,S.T, M.T.">Muh. Fajri Raharjo,S.T, M.T.</option>
+	  								<option value="Eddy Tungadi,S.T., M.T.">Eddy Tungadi,S.T., M.T.</option>
+	  								<option value="Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.">Irfan Syamsuddin,S.T. M.Com.ISM.,Ph.D.</option>
+	  								<option value="Meylanie Olivya,S.T.,M.T.">Meylanie Olivya,S.T.,M.T.</option>
+	  								<option value="Muhammad Nur Yasir Utomo, S.ST, M.Eng.">Muhammad Nur Yasir Utomo, S.ST, M.Eng.</option>
+	  								<option value="Zawiyah Saharuna,S.T.,M.Eng.">Zawiyah Saharuna,S.T.,M.Eng.</option>
+	  								<option value="Rini Nur,S.T., M.T.">Rini Nur,S.T., M.T.</option>
+	  								<option value="Dharma Aryani,S.T., M.T., Ph.D.">Dharma Aryani,S.T., M.T., Ph.D.</option>
+	  								<option value="Sahbuddin Abdul Kadir, ST., MT.">Sahbuddin Abdul Kadir, ST., MT.</option>
+	  								<option value="Dr. Ir. Hafsah Nirwana, M.T.">Dr. Ir. Hafsah Nirwana, M.T.</option>
+								</select>
+							</div>	
+						</div>
+
+						<label for="Tempat">Tempat </label>
+						<div class="form-group input-group mb-2 mr-sm-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text "><i class="fas fa-map-marker-alt"></i></div>
+							</div>
+							<input type="text" placeholder="Masukkan tempat atau link meet ujian anda" class="form-control rounded-lg">
+						</div>
+
+						<label for="Tanggal">Tanggal/Bulan/Tahun</label>
+						<div class="form-group input-group mb-2 mr-sm-2">
+							 <div class="input-group-prepend">
+					      		<div class="input-group-text "><i class="fas fa-calendar-alt"></i></div>
+					   	 </div>
+							<input type="date" placeholder="Masukkan Tanggal, Bulan, dan Tahun ujian anda" class="form-control rounded-lg">
+						</div>
+
+						<label for="Hari">Hari</label>
+						<div class="form-group input-group mb-2 mr-sm-2">
+							 <div class="input-group-prepend">
+							 	<div class="input-group-text ">
+							 		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-day" viewBox="0 0 16 16">
+									<path d="M4.684 11.523v-2.3h2.261v-.61H4.684V6.801h2.464v-.61H4v5.332h.684zm3.296 0h.676V8.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a1.806 1.806 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98v4.105zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43zm.094 5.093h.672V7.418h-.672v4.105z"/>
+									<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+									</svg>
+							 	</div>
+							 </div>  	
+							<input type="text" placeholder="Masukkan Hari ujian anda" class="form-control rounded-lg">
+						</div>
+
+						<label for="Jam">Jam</label>
+						<div class="form-group input-group mb-2 mr-sm-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text "><i class="fas fa-clock"></i></div>
+							</div>
+							<select class="form-control rounded-lg" id="Jam" name="Jam[]" multiple="multiple" >
+								<option value="Sesi Pagi">Sesi Pagi</option>
+								<option value="Sesi Siang">Sesi Siang</option>
+								<option value="08:30-09:00">08:30-09:00</option>
+								<option value="08:30-09:00">08:30-09:00</option>
+								<option value=">09:00-09:30">09:00-09:30</option>
+								<option value="09:30-10:00">09:30-10:00</option>
+								<option value="10:00-10:30">10:00-10:30</option>
+								<option value="14:00-14:30">14:00-14:30</option>
+							</select>			
+						</div>
+
+						<div class="form-group">
+							<div class="custom-control custom-checkbox small">
+								<input type="checkbox" id="CustomCheckbox1" class="custom-control-input">
+								<label class="custom-control-label" for="CustomCheckbox1">Pastikan data yang anda masukkan benar</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary rounded-lg btn-block">DAFTAR</button>
+						</div>
+					</form>
+					<p class="my-3 text-center small">Copyright &copy; </i> 2022 | Built by <a href="http://instagram.com/nurfdl.r">Nur Fadilah</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="bootstrap-4.6.1-dist/css/bootstrap.js"></script>
+  <!-- wajib jquery  -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <!-- js untuk bootstrap4  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+        <!-- js untuk select2  -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script>
+        	 function NumbersOnly(input){
+            	var regex = /[^0-9]/g;
+            	input.value = input.value.replace(regex, "");
+
+            }
+
+             function LettersOnly(input){
+            	var regex = /[^a-z]/gi;
+            	input.value = input.value.replace(regex, "");
+
+            }
+
+            function CheckLength(){
+            	const enterodeLength = input.value.length
+            	const maxLength = input.maxLength
+            }
+
+            $(document).ready(function () {
+                $("#Ketua, #Sekretaris").select2({
+                    theme: 'bootstrap4',
+                    placeholder: "Pilihlah ketua penguji TA anda"
+                });
+                 $("#Sekretaris").select2({
+                    theme: 'bootstrap4',
+                    placeholder: "Pilihlah Sekeretaris penguji TA anda"
+                });
+                $("#AnggotaI, #AnggotaII, #AnggotaIII, #AnggotaIV").select2({
+                    theme: 'bootstrap4',
+                    placeholder: "Pilihlah anggota penguji TA anda"
+                });
+                $("#Jam").select2({
+                    theme: 'bootstrap4',
+                    placeholder: "Pilihlah Jam ujian anda"
+                });
+            });
+
+
+           
+
+
+        </script>
+</body>
+</html>
